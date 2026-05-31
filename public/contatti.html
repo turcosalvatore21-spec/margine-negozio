@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contatti – Calcolatore Margine Negozio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#faf8f5;color:#1a1208;padding:48px 18px;max-width:780px;margin:0 auto;line-height:1.8}
+h1{font-size:2rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px}
+h2{font-size:1rem;font-weight:600;margin:32px 0 10px;color:#c8521a}
+p{color:#5a4a38;margin-bottom:12px;font-size:0.95rem}
+.badge{font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;color:#c8521a;text-transform:uppercase;margin-bottom:16px;display:block}
+.back{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:#8a7560;text-decoration:none;display:inline-block;margin-bottom:32px}
+.card{background:#fff;border:1px solid #e8e0d4;border-radius:8px;padding:24px;margin-bottom:16px}
+hr{border:none;border-top:1px solid #e8e0d4;margin:32px 0}
+label{display:block;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;color:#8a7560;text-transform:uppercase;margin-bottom:6px;margin-top:16px}
+input, textarea{width:100%;border:1px solid #e8e0d4;border-radius:6px;padding:12px 14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;color:#1a1208;background:#faf8f5;outline:none;transition:border 0.2s}
+input:focus, textarea:focus{border-color:#c8521a;background:#fff}
+textarea{height:120px;resize:vertical}
+button[type=submit]{margin-top:20px;background:#c8521a;color:#fff;border:none;border-radius:6px;padding:12px 28px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.1em;cursor:pointer;text-transform:uppercase;transition:background 0.2s}
+button[type=submit]:hover{background:#a84015}
+.success{display:none;background:#e8f5ee;border:1px solid #2a7a4b30;border-radius:6px;padding:16px;color:#2a7a4b;font-size:0.9rem;margin-top:16px;font-family:'IBM Plex Mono',monospace}
+</style>
+</head>
+<body>
+<a href="/" class="back">← Torna al calcolatore</a>
+<span class="badge">Informazioni</span>
+<h1>Chi Siamo e Contatti</h1>
+<hr>
+
+<div class="card">
+  <h2>Chi siamo</h2>
+  <p>Calcolatore Margine Negozio è uno strumento gratuito pensato per negozianti, commercianti e imprenditori che vogliono calcolare rapidamente i margini di guadagno, il punto di pareggio e simulare i prezzi di vendita.</p>
+  <p>Il sito è sviluppato e mantenuto a titolo personale con l'obiettivo di semplificare i calcoli quotidiani per chi gestisce un'attività commerciale.</p>
+</div>
+
+<div class="card">
+  <h2>A cosa serve questo strumento</h2>
+  <p>Il calcolatore permette di:</p>
+  <p>• Calcolare il margine netto e il ricarico su qualsiasi prodotto<br>
+  • Determinare il punto di pareggio mensile in base alle spese fisse<br>
+  • Simulare i prezzi di vendita per raggiungere diversi obiettivi di margine<br>
+  • Comprendere la composizione del prezzo (costo, margine, IVA)</p>
+</div>
+
+<div class="card">
+  <h2>Scrivici</h2>
+  <p>Hai domande, suggerimenti o vuoi segnalare un problema? Compila il modulo e ti risponderemo entro 2-3 giorni lavorativi.</p>
+  <form action="https://formspree.io/f/mykvaqgg" method="POST" id="contact-form">
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required/>
+    <label for="email">La tua Email</label>
+    <input type="email" id="email" name="email" placeholder="nome@esempio.it" required/>
+    <label for="messaggio">Messaggio</label>
+    <textarea id="messaggio" name="messaggio" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+    <button type="submit">Invia messaggio →</button>
+  </form>
+  <div class="success" id="success-msg">✓ Messaggio inviato! Ti risponderemo presto.</div>
+</div>
+
+<div class="card">
+  <h2>Note Legali</h2>
+  <p>I calcoli forniti da questo strumento hanno scopo puramente informativo e non costituiscono consulenza fiscale, contabile o finanziaria. Per decisioni importanti sulla tua attività consulta sempre un commercialista o un consulente qualificato.</p>
+</div>
+
+<hr>
+<p style="font-size:0.8rem;color:#8a7560">© 2025 Calcolatore Margine Negozio — 
+<a href="/privacy.html" style="color:#8a7560">Privacy Policy</a> · 
+<a href="/cookie.html" style="color:#8a7560">Cookie Policy</a></p>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+  if (res.ok) {
+    form.style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  }
+});
+</script>
+</body>
+</html>
