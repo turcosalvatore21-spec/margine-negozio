@@ -274,6 +274,23 @@ export default function App() {
               </div>
             </Card>
             <AdSlot id="base-rect" size="rect" />
+            <a href="https://salvoturco.gumroad.com/l/viejex"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: "block",
+    marginTop: 24,
+    padding: "20px 24px",
+    borderRadius: 12,
+    background: C.accent || "#111",
+    color: "#fff",
+    textDecoration: "none",
+    textAlign: "center",
+    fontFamily: C.mono,
+  }}
+>
+  📊 Vuoi gestire cassa e margini in automatico? Scarica il template pronto all'uso →
+</a>
           </div>
         )}
 
@@ -404,6 +421,23 @@ export default function App() {
               </Card>
             ))}
             <AdSlot id="guida-leader" size="leaderboard" />
+            <a href="https://salvoturco.gumroad.com/l/viejex"
+target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "block",
+            marginTop: 24,
+            padding: "20px 24px",
+            borderRadius: 12,
+            background: C.accent || "#111",
+            color: "#fff",
+            textDecoration: "none",
+            textAlign: "center",
+            fontFamily: C.mono,
+          }}
+        >
+          📊 Vuoi gestire cassa e margini in automatico? Scarica il template pronto all'uso →
+        </a>
           </div>
         )}
 
@@ -420,6 +454,11 @@ export default function App() {
             <a href="/cookie.html" style={{ fontFamily: C.mono, fontSize: "0.6rem", color: C.muted, textDecoration: "none" }}>Cookie Policy</a>
             <a href="/contatti.html" style={{ fontFamily: C.mono, fontSize: "0.6rem", color: C.muted, textDecoration: "none" }}>Contatti</a>
           </div>
+          <p style={{ marginTop: 12, fontFamily: C.mono, fontSize: "0.58rem", width: "100%", textAlign: "center" }}>
+  Altri strumenti gratuiti:{" "}
+  <a href="https://calcolatore-forfettario-eight.vercel.app" target="_blank" rel="noopener" style={{ color: "inherit", textDecoration: "underline", margin: "0 6px" }}>Calcolatore Regime Forfettario</a>
+  <a href="https://calcolatore-mutuo-one.vercel.app" target="_blank" rel="noopener" style={{ color: "inherit", textDecoration: "underline", margin: "0 6px" }}>Calcolatore Mutuo</a>
+</p>
         </div>
       </div>
     </div>
