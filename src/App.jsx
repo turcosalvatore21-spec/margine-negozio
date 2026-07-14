@@ -458,6 +458,7 @@ target="_blank"
   Altri strumenti gratuiti:{" "}
   <a href="https://calcolatore-forfettario-eight.vercel.app" target="_blank" rel="noopener" style={{ color: "inherit", textDecoration: "underline", margin: "0 6px" }}>Calcolatore Regime Forfettario</a>
   <a href="https://calcolatore-mutuo-one.vercel.app" target="_blank" rel="noopener" style={{ color: "inherit", textDecoration: "underline", margin: "0 6px" }}>Calcolatore Mutuo</a>
+  <a href="https://costo-dipendente.vercel.app" target="_blank" rel="noopener" style={{ color: "inherit", textDecoration: "underline", margin: "0 6px" }}>Calcolatore Costo Dipendente</a>
 </p>
         </div>
       </div>
