@@ -15,13 +15,6 @@ p{color:#5a4a38;margin-bottom:12px;font-size:0.95rem}
 .back{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:#8a7560;text-decoration:none;display:inline-block;margin-bottom:32px}
 .card{background:#fff;border:1px solid #e8e0d4;border-radius:8px;padding:24px;margin-bottom:16px}
 hr{border:none;border-top:1px solid #e8e0d4;margin:32px 0}
-label{display:block;font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;color:#8a7560;text-transform:uppercase;margin-bottom:6px;margin-top:16px}
-input, textarea{width:100%;border:1px solid #e8e0d4;border-radius:6px;padding:12px 14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.95rem;color:#1a1208;background:#faf8f5;outline:none;transition:border 0.2s}
-input:focus, textarea:focus{border-color:#c8521a;background:#fff}
-textarea{height:120px;resize:vertical}
-button[type=submit]{margin-top:20px;background:#c8521a;color:#fff;border:none;border-radius:6px;padding:12px 28px;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;letter-spacing:0.1em;cursor:pointer;text-transform:uppercase;transition:background 0.2s}
-button[type=submit]:hover{background:#a84015}
-.success{display:none;background:#e8f5ee;border:1px solid #2a7a4b30;border-radius:6px;padding:16px;color:#2a7a4b;font-size:0.9rem;margin-top:16px;font-family:'IBM Plex Mono',monospace}
 </style>
 </head>
 <body>
@@ -47,17 +40,8 @@ button[type=submit]:hover{background:#a84015}
 
 <div class="card">
   <h2>Scrivici</h2>
-  <p>Hai domande, suggerimenti o vuoi segnalare un problema? Compila il modulo e ti risponderemo entro 2-3 giorni lavorativi.</p>
-  <form action="https://formspree.io/f/mykvaqgg" method="POST" id="contact-form">
-    <label for="nome">Nome</label>
-    <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required/>
-    <label for="email">La tua Email</label>
-    <input type="email" id="email" name="email" placeholder="nome@esempio.it" required/>
-    <label for="messaggio">Messaggio</label>
-    <textarea id="messaggio" name="messaggio" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
-    <button type="submit">Invia messaggio →</button>
-  </form>
-  <div class="success" id="success-msg">✓ Messaggio inviato! Ti risponderemo presto.</div>
+  <p>Hai domande, suggerimenti o vuoi segnalare un problema? Scrivi a:</p>
+  <p><a href="mailto:turcosalvatore21@gmail.com" style="color:#c8521a;font-family:'IBM Plex Mono',monospace;font-size:0.9rem">turcosalvatore21@gmail.com</a></p>
 </div>
 
 <div class="card">
@@ -69,18 +53,5 @@ button[type=submit]:hover{background:#a84015}
 <p style="font-size:0.8rem;color:#8a7560">© 2025 Calcolatore Margine Negozio — 
 <a href="/privacy.html" style="color:#8a7560">Privacy Policy</a> · 
 <a href="/cookie.html" style="color:#8a7560">Cookie Policy</a></p>
-
-<script>
-document.getElementById('contact-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const data = new FormData(form);
-  const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
-  if (res.ok) {
-    form.style.display = 'none';
-    document.getElementById('success-msg').style.display = 'block';
-  }
-});
-</script>
 </body>
 </html>
